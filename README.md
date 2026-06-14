@@ -1,28 +1,41 @@
-# 🚀 VPN Gateway Setup Script
+# 🚀 Startup Scripts Collection
 
-> Automatic VPN routing, firewall configuration & gateway management
+> Essential automation scripts for Linux servers, VPN gateways, and network configuration
 
 ![Bash](https://img.shields.io/badge/Bash-4.4+-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![OpenVPN](https://img.shields.io/badge/OpenVPN-EA7E20?style=for-the-badge&logo=openvpn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![GitHub](https://img.shields.io/badge/GitHub-Pooria--as-181717?style=for-the-badge&logo=github)
 
 ---
 
 ## 📖 Overview
 
-This powerful bash script automatically configures a VPN gateway server with advanced routing, firewall rules, and multi-VPN support. Perfect for creating a secure VPN gateway, proxy server, or network router.
+A collection of powerful bash scripts for automating server setup, VPN gateway configuration, and network management. Perfect for:
 
-### ✨ Features
+- 🖥️ **Server initialization**
+- 🔐 **VPN gateway setup**
+- 🌐 **Network routing & firewall**
+- ⚡ **Quick deployment**
 
-| Feature | Description |
-|---------|-------------|
-| 🎯 **Auto Configuration** | Automatically detects network interfaces and sets up routing tables |
-| 🔄 **Multi-VPN Support** | Handles OpenVPN, WireGuard, and Cisco AnyConnect |
-| 🛡️ **Firewall Rules** | Configures iptables for NAT, forwarding, and security |
-| 📊 **Custom Routing** | Creates DIRECT table (200) for advanced traffic management |
-| 🔧 **DNS Setup** | Automatically configures Google DNS servers |
-| 💾 **Persistent Settings** | Saves sysctl and routing configurations |
+---
+
+## 📦 Scripts Included
+
+| Script | Purpose | Status |
+|--------|---------|--------|
+| `setup.sh` | VPN gateway with routing & iptables | ✅ Stable |
+| More coming soon | ... | 🚧 WIP |
+
+### Current Script: VPN Gateway Setup
+
+This script automatically configures a VPN gateway server with:
+- ✅ Custom routing table (200 DIRECT)
+- ✅ OpenVPN & OCserv auto-start
+- ✅ IP forwarding & NAT masquerading
+- ✅ Automatic interface detection
+- ✅ Bidirectional traffic forwarding
 
 ---
 
@@ -30,9 +43,11 @@ This powerful bash script automatically configures a VPN gateway server with adv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/vpn-gateway-setup.git
-cd vpn-gateway-setup
+git clone https://github.com/Pooria-as/startup.git
+cd startup
 
-# Make executable and run
+# Make script executable
 chmod +x setup.sh
+
+# Run as root
 sudo ./setup.sh
